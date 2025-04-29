@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Amrish Kumar",
+        "storage_energy_kwh": 1.8,
+        "transport_energy_kwh": 2.2,
+        "emissions_kgco2": 2.0
+    },
+    {
+        "name": "Rajpal Nath",
+        "storage_energy_kwh": 145.0,
+        "transport_energy_kwh": 180.0,
+        "emissions_kgco2": 162.5
+    },
+    {
+        "name": "Pooja Reddy",
+        "storage_energy_kwh": 180.0,
+        "transport_energy_kwh": 135.0,
+        "emissions_kgco2": 157.5
+    },
+    {
+        "name": "Rahul Deshpande",
+        "storage_energy_kwh": 350.0,
+        "transport_energy_kwh": 400.0,
+        "emissions_kgco2": 375.0
+    },
+    {
+        "name": "Vijay Chauhan",
+        "storage_energy_kwh": 256.0,
+        "transport_energy_kwh": 450.0,
+        "emissions_kgco2": 353.0
+    },
+    {
+        "name": "Manoj Singh",
+        "storage_energy_kwh": 130.0,
+        "transport_energy_kwh": 200.0,
+        "emissions_kgco2": 165.0
+    },
+    {
+        "name": "Anil Meena",
+        "storage_energy_kwh": 500.0,
+        "transport_energy_kwh": 500.0,
+        "emissions_kgco2": 500.0
+    },
+    {
+        "name": "Suraj Vishwakarma",
+        "storage_energy_kwh": 450.0,
+        "transport_energy_kwh": 350.0,
+        "emissions_kgco2": 400.0
+    },
+    {
+        "name": "Prakash Mali",
+        "storage_energy_kwh": 200.0,
+        "transport_energy_kwh": 100.0,
+        "emissions_kgco2": 150.0
+    },
+    {
+        "name": "Pawan Mondal",
+        "storage_energy_kwh": 300.0,
+        "transport_energy_kwh": 450.0,
+        "emissions_kgco2": 375.0
+    },
+    {
+        "name": "Anuj Parmar",
+        "storage_energy_kwh": 4.5,
+        "transport_energy_kwh": 3.6,
+        "emissions_kgco2": 4.05
+    },
+    {
+        "name": "Kunal Panchal",
+        "storage_energy_kwh": 450.0,
+        "transport_energy_kwh": 500.0,
+        "emissions_kgco2": 475.0
+    }
+]

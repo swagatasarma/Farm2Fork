@@ -1,0 +1,131 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-4">
+  <h2>Analytics Dashboard</h2>
+  <canvas id="analyticsChart" width="400" height="200"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById("analyticsChart").getContext("2d");
+  const analyticsChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Tomatoes", "Potatoes", "Carrots", "Peppers"],
+      datasets: [
+        {
+          label: "Produce Sold (kg)",
+          data: [120, 190, 300, 90],
+          backgroundColor: ["#ff6384", "#36a2eb", "#cc65fe", "#ffce56"],
+        },
+      ],
+    },
+  });
+</script>
+
+  <div class="container mt-5">
+    <h4>Total Products Over Time</h4>
+    <canvas id="lineChart"></canvas>
+  </div>
+
+  <div class="container mt-5">
+    <h4>Top 5 Most Traded Items</h4>
+    <canvas id="topItemsChart"></canvas>
+  </div>
+
+  <div class="container mt-5">
+    <h4>Monthly Transaction Volume</h4>
+    <canvas id="monthlyVolumeChart"></canvas>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <h4>Inventory Category Distribution</h4>
+    <canvas id="inventoryPieChart"></canvas>
+  </div>
+
+  <script>
+    const lineCtx = document.getElementById("lineChart").getContext("2d");
+    new Chart(lineCtx, {
+      type: "line",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+        datasets: [{
+          label: "Total Products",
+          data: [100, 150, 130, 170, 200],
+          borderColor: "#36a2eb",
+          fill: false
+        }]
+      }
+    });
+
+    const topItemsCtx = document.getElementById("topItemsChart").getContext("2d");
+    new Chart(topItemsCtx, {
+      type: "bar",
+      data: {
+        labels: ["Tomatoes", "Wheat", "Milk", "Onions", "Apples"],
+        datasets: [{
+          label: "Trade Volume (kg)",
+          data: [500, 450, 430, 400, 380],
+          backgroundColor: "#ff6384"
+        }]
+      }
+    });
+
+    const monthlyVolumeCtx = document.getElementById("monthlyVolumeChart").getContext("2d");
+    new Chart(monthlyVolumeCtx, {
+      type: "line",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+        datasets: [{
+          label: "Transactions",
+          data: [50, 65, 70, 85, 90],
+          borderColor: "#cc65fe",
+          fill: false
+        }]
+      }
+    });
+
+    const pieCtx = document.getElementById("inventoryPieChart").getContext("2d");
+    new Chart(pieCtx, {
+      type: "pie",
+      data: {
+        labels: ["Vegetables", "Fruits", "Dairy", "Grains"],
+        datasets: [{
+          label: "Inventory Categories",
+          data: [300, 200, 150, 100],
+          backgroundColor: ["#ffce56", "#36a2eb", "#ff6384", "#cc65fe"]
+        }]
+      }
+    });
+  </script>
+
+  <div class="container mt-5">
+    <h4>Carbon Emissions Over Time</h4>
+    <canvas id="carbonTimeChart"></canvas>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <h4>Carbon Emissions by Transport Mode</h4>
+    <canvas id="carbonModeChart"></canvas>
+  </div>
+
+  <script>
+    const carbonTimeCtx = document.getElementById("carbonTimeChart").getContext("2d");
+    new Chart(carbonTimeCtx, {
+      type: "line",
+      data: {
+        labels: ["2025-04-01", "2025-04-02", "2025-04-03", "2025-04-04", "2025-04-05"],
+        datasets: [{ label: "Total Emissions (kg CO2)", data: [12.5, 5.0, 2.8, 14.2, 30.0], borderColor: "#4bc0c0", fill: false }]
+      }
+    });
+
+    const carbonModeCtx = document.getElementById("carbonModeChart").getContext("2d");
+    new Chart(carbonModeCtx, {
+      type: "bar",
+      data: {
+        labels: ["truck", "train", "ship", "air"],
+        datasets: [{ label: "Emissions by Mode (kg CO2)", data: [26.7, 5.0, 2.8, 30.0], backgroundColor: "#9966ff" }]
+      }
+    });
+  </script>
+
+{% endblock %}
+

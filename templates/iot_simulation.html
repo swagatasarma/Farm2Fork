@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>IoT Simulation</h2>
+    <p>Simulated sensor data stream (temperature, humidity):</p>
+    <ul id="sensor-data">
+        <li>Temperature: <span id="temp">--</span> °C</li>
+        <li>Humidity: <span id="humidity">--</span> %</li>
+    </ul>
+</div>
+<script>
+    function updateSensorData() {
+        document.getElementById('temp').textContent = (20 + Math.random() * 10).toFixed(2);
+        document.getElementById('humidity').textContent = (40 + Math.random() * 20).toFixed(2);
+    }
+    setInterval(updateSensorData, 1000);
+</script>
+{% endblock %}

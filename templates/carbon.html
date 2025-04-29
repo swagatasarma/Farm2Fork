@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carbon Footprint Estimator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-4">
+    <div class="container">
+      <h2>Carbon Footprint Estimator</h2>
+      <form method="post" class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">Transport Type</label>
+          <select name="mode" class="form-select" required>
+            <option value="truck">Truck</option>
+            <option value="train">Train</option>
+            <option value="ship">Ship</option>
+            <option value="air">Air</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Distance (km)</label>
+          <input type="number" name="distance" class="form-control" required />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Weight (kg)</label>
+          <input type="number" name="weight" class="form-control" required />
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary">Estimate</button>
+        </div>
+      </form>
+
+      {% if result is not none %}
+      <div class="alert alert-info mt-4">
+        Estimated Carbon Footprint: <strong>{{ result }} kg CO₂</strong>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
+{% endblock %}

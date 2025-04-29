@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='style.css') }}"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #e6ffe6; /* Light green background */
+      }
+      .feature-button {
+        display: inline-block;
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 16px;
+        background-color: #006400; /* Dark green */
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+      .feature-button:hover {
+        background-color: #004d00; /* Even darker green on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      "
+    >
+      <div class="container mt-4">
+        <h1>Welcome to Farm2Fork</h1>
+        <div class="d-flex flex-wrap justify-content-center">
+          <a class="feature-button" href="/farmer">Farmer Portal</a>
+          <a class="feature-button" href="/intermediary">Intermediary Portal</a>
+          <a class="feature-button" href="/consumer">Consumer View</a>
+        </div>
+
+        <!-- Features Section -->
+        <section class="container mt-5" id="features">
+          <h2 class="text-center mb-4">Key Features</h2>
+          <div class="d-flex flex-wrap justify-content-center">
+            <a class="feature-button" href="/inventory">Inventory</a>
+            <a class="feature-button" href="/iot_simulation/">IoT Simulation</a>
+            <a class="feature-button" href="/transactions">Transactions</a>
+            <a class="feature-button" href="/analytics/">Analytics</a>
+            <a class="feature-button" href="/carbon">Carbon Calculator</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Carbon Footprint Estimator Section -->
+      <div
+        style="
+          margin: 20px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          background-color: white;
+        "
+      >
+        <h3>Carbon Footprint Estimator</h3>
+        <p>
+          Estimate carbon emissions from transport, production, and packaging.
+        </p>
+        <a
+          class="feature-button"
+          href="/carbon/advanced"
+          style="text-decoration: none"
+          >Calculate</a
+        >
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

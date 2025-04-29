@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Consumer_1",
+    "purchased_produce": "Corn",
+    "quantity": 2
+  },
+  {
+    "name": "Consumer_2",
+    "purchased_produce": "Corn",
+    "quantity": 18
+  },
+  {
+    "name": "Consumer_3",
+    "purchased_produce": "Carrots",
+    "quantity": 11
+  },
+  {
+    "name": "Consumer_4",
+    "purchased_produce": "Corn",
+    "quantity": 3
+  },
+  {
+    "name": "Consumer_5",
+    "purchased_produce": "Potatoes",
+    "quantity": 8
+  }
+]

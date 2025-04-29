@@ -1,0 +1,83 @@
+{% extends "base.html" %} {% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farmer Entry</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="mb-4">Farmer Data Entry</h2>
+
+      <form method="POST" class="mb-4">
+        <div class="mb-3">
+          <label class="form-label">Name:</label>
+          <input type="text" name="name" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Produce:</label>
+          <input type="text" name="produce" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Energy Used (kWh):</label>
+          <input
+            type="number"
+            name="energy"
+            step="0.01"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+
+      {% if qr_exists %}
+      <div class="mb-4">
+        <h4>Generated QR Code:</h4>
+        <img
+          src="{{ url_for('static', filename='qr.png') }}"
+          alt="QR Code"
+          class="img-thumbnail"
+        />
+      </div>
+      {% endif %}
+
+      <hr />
+
+      <h3>Previously Submitted Farmers</h3>
+      <div id="farmer-data" class="mt-3">
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <script>
+      fetch("/farmer_data")
+        .then((response) => response.json())
+        .then((data) => {
+          const container = document.getElementById("farmer-data");
+          if (data.length === 0) {
+            container.innerHTML = "<p>No data submitted yet.</p>";
+            return;
+          }
+
+          let table =
+            "<table class='table table-bordered'><thead><tr><th>Name</th><th>Produce</th><th>Energy Used (kWh)</th><th>Emissions (kg CO2)</th></tr></thead><tbody>";
+          data.forEach((item) => {
+            table += `<tr>
+                        <td>${item.name}</td>
+                        <td>${item.produce}</td>
+                        <td>${item.energy_used_kwh}</td>
+                        <td>${item.emissions_kgco2}</td>
+                    </tr>`;
+          });
+          table += "</tbody></table>";
+          container.innerHTML = table;
+        });
+    </script>
+  </body>
+</html>
+{% endblock %}

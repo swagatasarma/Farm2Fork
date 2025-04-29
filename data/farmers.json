@@ -1,0 +1,140 @@
+[
+    {
+        "name": "Rajesh Singh",
+        "produce": "wheat",
+        "energy_used_kwh": 150.0,
+        "emissions_kgco2": 60.0
+    },
+    {
+        "name": "Lokesh Yadav",
+        "produce": "corn",
+        "energy_used_kwh": 245.0,
+        "emissions_kgco2": 98.0
+    },
+    {
+        "name": "Piyush Mahawat",
+        "produce": "carrots",
+        "energy_used_kwh": 567.0,
+        "emissions_kgco2": 226.8
+    },
+    {
+        "name": "Rohan Garg",
+        "produce": "beans",
+        "energy_used_kwh": 340.0,
+        "emissions_kgco2": 136.0
+    },
+    {
+        "name": "Sukanda Devi",
+        "produce": "potato",
+        "energy_used_kwh": 234.0,
+        "emissions_kgco2": 93.6
+    },
+    {
+        "name": "Arvind Patel",
+        "produce": "maize",
+        "energy_used_kwh": 450.0,
+        "emissions_kgco2": 180.0
+    },
+    {
+        "name": "Suman Rani",
+        "produce": "bajra",
+        "energy_used_kwh": 634.0,
+        "emissions_kgco2": 253.6
+    },
+    {
+        "name": "Raghavendra Rao",
+        "produce": "potato",
+        "energy_used_kwh": 368.0,
+        "emissions_kgco2": 147.2
+    },
+    {
+        "name": "Omprakash Verma",
+        "produce": "barley",
+        "energy_used_kwh": 876.0,
+        "emissions_kgco2": 350.4
+    },
+    {
+        "name": "Savita Yadav",
+        "produce": "millets",
+        "energy_used_kwh": 209.0,
+        "emissions_kgco2": 83.6
+    },
+    {
+        "name": "Sanjay Choudhary",
+        "produce": "chana",
+        "energy_used_kwh": 670.0,
+        "emissions_kgco2": 268.0
+    },
+    {
+        "name": "Vinod Sharma",
+        "produce": "arhar",
+        "energy_used_kwh": 840.0,
+        "emissions_kgco2": 336.0
+    },
+    {
+        "name": "Aarti Patel",
+        "produce": "cotton",
+        "energy_used_kwh": 300.0,
+        "emissions_kgco2": 120.0
+    },
+    {
+        "name": "Nibedita Roy",
+        "produce": "tea",
+        "energy_used_kwh": 290.0,
+        "emissions_kgco2": 116.0
+    },
+    {
+        "name": "Anil Jadhav",
+        "produce": "sunflower",
+        "energy_used_kwh": 237.0,
+        "emissions_kgco2": 94.8
+    },
+    {
+        "name": "Pushpa Kumari",
+        "produce": "mustard",
+        "energy_used_kwh": 100.0,
+        "emissions_kgco2": 40.0
+    },
+    {
+        "name": "Hariram Bhil",
+        "produce": "castor oil",
+        "energy_used_kwh": 457.0,
+        "emissions_kgco2": 182.8
+    },
+    {
+        "name": "Nandlal Meena",
+        "produce": "peanuts",
+        "energy_used_kwh": 244.0,
+        "emissions_kgco2": 97.6
+    },
+    {
+        "name": "Gopal Das",
+        "produce": "guava",
+        "energy_used_kwh": 460.0,
+        "emissions_kgco2": 184.0
+    },
+    {
+        "name": "Kavita Rani",
+        "produce": "papaya",
+        "energy_used_kwh": 170.0,
+        "emissions_kgco2": 68.0
+    },
+    {
+        "name": "Mahendra Iyer",
+        "produce": "corn",
+        "energy_used_kwh": 446.0,
+        "emissions_kgco2": 178.4
+    },
+    {
+        "name": "Sarvesh Jadhav",
+        "produce": "capsicum",
+        "energy_used_kwh": 350.0,
+        "emissions_kgco2": 140.0
+    },
+    {
+        "name": "Rajesh Singh",
+        "produce": "wheat",
+        "energy_used_kwh": 500.0,
+        "emissions_kgco2": 200.0
+    }
+]

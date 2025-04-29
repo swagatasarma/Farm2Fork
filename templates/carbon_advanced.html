@@ -1,0 +1,131 @@
+{% extends "base.html" %} {% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced Carbon Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      form {
+        max-width: 500px;
+        margin: auto;
+      }
+      label,
+      select,
+      input {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+      }
+      .result-box {
+        background: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Advanced Carbon Footprint Estimator</h2>
+    <form method="POST">
+      <label>Transportation Mode:</label>
+      <select name="mode" required>
+        <option value="truck">Truck</option>
+        <option value="train">Train</option>
+        <option value="ship">Ship</option>
+        <option value="air">Air</option>
+      </select>
+
+      <label>Distance (in km):</label>
+      <input type="number" name="distance" step="any" required />
+
+      <label>Weight (in kg):</label>
+      <input type="number" name="weight" step="any" required />
+
+      <label>Type of Produce:</label>
+      <select name="produce_type" required>
+        <option value="vegetable">Vegetable</option>
+        <option value="meat">Meat</option>
+        <option value="dairy">Dairy</option>
+      </select>
+
+      <label>Farming Method:</label>
+      <select name="farming_method" required>
+        <option value="organic">Organic</option>
+        <option value="conventional">Conventional</option>
+        <option value="greenhouse">Greenhouse</option>
+      </select>
+
+      <label>Packaging Type:</label>
+      <select name="packaging" required>
+        <option value="plastic">Plastic</option>
+        <option value="biodegradable">Biodegradable</option>
+        <option value="none">None</option>
+      </select>
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    {% if breakdown %}
+    <div class="result-box">
+      <h3>Emission Breakdown (kg CO₂)</h3>
+      <table>
+        <tr>
+          <th>Category</th>
+          <th>Emission</th>
+        </tr>
+        <tr>
+          <td>Transport</td>
+          <td>{{ breakdown.transport_emission }}</td>
+        </tr>
+        <tr>
+          <td>Production</td>
+          <td>{{ breakdown.production_emission }}</td>
+        </tr>
+        <tr>
+          <td>Packaging</td>
+          <td>{{ breakdown.packaging_emission }}</td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <th>{{ breakdown.total_emission }}</th>
+        </tr>
+      </table>
+      <p>
+        Equivalent to driving <strong>{{ breakdown.car_km_eq }}</strong> km in a
+        car.
+      </p>
+      <p>
+        Would require <strong>{{ breakdown.trees_needed }}</strong> trees to
+        offset annually.
+      </p>
+    </div>
+    {% elif result %}
+    <div class="result-box">
+      <p>{{ result }}</p>
+    </div>
+    {% else %}
+    <div class="result-box">
+      <p>
+        No data submitted yet. Please fill the form above to calculate
+        emissions.
+      </p>
+    </div>
+    {% endif %}
+  </body>
+</html>
+{% endblock %}
